@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    {{signo}}
+{% endblock %}
+
+{% block content %}
+    {% include 'zodiac/includes/header.html'%}
+    <h1>{{signo | title}}</h1>
+    <h2>{{signo_texto}}</h2>
+{% endblock %}

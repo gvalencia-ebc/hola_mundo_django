@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    Signos Zodiacales
+{% endblock %}
+
+{% block content %}
+
+        {% include 'zodiac/includes/header.html'%}
+        
+            {% for signo in signos %}
+                <li><a href="{% url 'get-by-name' signo %}">{{signo | title}}</a></li>
+            {% endfor %}
+        </ul>
+{% endblock %}
